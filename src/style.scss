@@ -13,16 +13,27 @@
       @content;
     }
   }
+
+  $dark: #112211;
+  $lite: #fff;
+  $light-grey: #ebf4fc;
+  $grey: #c9c9c9;
+
+  $dark-green: #007a37;
+  $green: #00ae58;
+  $light-green: #2dc245;
+  $red: red;
+
   
   .formContainer {
-    background-color: #008080;
+    background: $light-green;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
   
     .formWrapper {
-      background-color: white;
+      background: $lite;
       padding: 20px 60px;
       border-radius: 10px;
       display: flex;
@@ -31,14 +42,14 @@
       align-items: center;
   
       .logo {
-        color: #5d5b8d;
+        color: $dark-green;
         font-weight: bold;
         font-size: 24px;
   
       }
   
       .title {
-        color: #5d5b8d;
+        color: $dark-green;
         font-size: 12px;
       }
   
@@ -51,15 +62,19 @@
           padding: 15px;
           border: none;
           width: 250px;
-          border-bottom: 1px solid #008080;
+          border-bottom: 1px solid $green;
           &::placeholder {
-            color: rgb(175, 175, 175);
+            color: $light-green;
           }
+        }
+
+        .error{
+          color: $red;
         }
   
         button {
-          background-color: #7b96ec;
-          color: white;
+          background: $dark-green;
+          color: $lite;
           padding: 10px;
           font-weight: bold;
           border: none;
@@ -70,7 +85,7 @@
           display: flex;
           align-items: center;
           gap: 10px;
-          color: #92cbf9;
+          color: $light-green;
           font-size: 12px;
           cursor: pointer;
   
@@ -80,25 +95,28 @@
         }
       }
       p {
-        color: #5d5b8d;
+        color: $light-green;
         font-size: 12px;
         margin-top: 10px;
+        *{
+          color: $dark-green;
+        }
       }
     }
   }
   
   .home {
-    background-color: #008080;
+    background: $light-green;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
   
     .container {
-      border: 1px solid white;
+      border: 1px solid $lite;
       border-radius: 10px;
-      width: 65%;
-      height: 80%;
+      width: 80%;
+      height: 90%;
       display: flex;
       overflow: hidden;
       @include tablet {
@@ -107,17 +125,17 @@
   
       .sidebar {
         flex: 1;
-        background-color: #92cbf9;
+        background: $dark-green;
         position: relative;
   
         .navbar {
           display: flex;
           align-items: center;
-          background-color: #2f2d52;
+          background: $dark;
           height: 50px;
           padding: 10px;
           justify-content: space-between;
-          color: #ddddf7;
+          color: $lite;
   
           .logo {
             font-weight: bold;
@@ -131,7 +149,7 @@
             gap: 10px;
   
             img {
-              background-color: #ddddf7;
+              background: $lite;
               height: 24px;
               width: 24px;
               border-radius: 50%;
@@ -139,9 +157,10 @@
             }
   
             button {
-              background-color: #5d5b8d;
-              color: #ddddf7;
+              background: $light-green;
+              color: $lite;
               font-size: 10px;
+              padding: 5px;
               border: none;
               cursor: pointer;
               @include tablet {
@@ -152,39 +171,50 @@
           }
         }
         .search {
-          border-bottom: 1px solid gray;
+          border-bottom: 1px solid $grey;
   
           .searchForm {
-            padding: 10px;
+            margin: 5px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid $lite;
+            border-radius: 5px;
+            img {
+              height: 24px;
+              cursor: pointer;
+            }
   
             input {
-              background-color: transparent;
+              flex: 1;
+              background: transparent;
               border: none;
-              color: white;
+              color: $lite;
               outline: none;
   
               &::placeholder {
-                color: lightgray;
+                color: $light-grey;
               }
             }
           }
         }
   
         .userChat {
-          padding: 10px;
+          padding: 5px;
           display: flex;
           align-items: center;
           gap: 10px;
-          color: white;
+          color: $lite;
           cursor: pointer;
   
           &:hover {
-            background-color: #2f2d52;
+            background: $dark;
           }
   
           img {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             object-fit: cover;
           }
@@ -196,22 +226,23 @@
             }
             p {
               font-size: 14px;
-              color: lightgray;
+              color: $light-grey;
             }
           }
         }
       }
       .chat {
-        flex: 2;
+        flex: 3;
+        min-width: 200px;
   
         .chatInfo {
           height: 50px;
-          background-color: #5d5b8d;
+          background: $dark-green;
           display: flex;
           align-items: center;
           justify-content: space-between;
           padding: 10px;
-          color: lightgray;
+          color: $light-grey;
         }
   
         .chatIcons {
@@ -225,7 +256,7 @@
         }
   
         .messages {
-          background-color: #ddddf7;
+          background: $lite;
           padding: 10px;
           height: calc(100% - 160px);
           overflow: scroll;
@@ -238,7 +269,7 @@
             .messageInfo {
               display: flex;
               flex-direction: column;
-              color: gray;
+              color: $grey;
               font-weight: 300;
   
               img {
@@ -255,7 +286,7 @@
               gap: 10px;
   
               p {
-                background-color: white;
+                background: $lite;
                 padding: 10px 20px;
                 border-radius: 0px 10px 10px 10px;
                 max-width: max-content;
@@ -272,8 +303,8 @@
               .messageContent {
                 align-items: flex-end;
                 p {
-                  background-color: #92cbf9;
-                  color: white;
+                  background: $dark-green;
+                  color: $lite;
                   border-radius: 10px 0px 10px 10px;
                 }
               }
@@ -283,7 +314,7 @@
   
         .input {
           height: 50px;
-          background-color: white;
+          background: $light-grey;
           padding: 10px;
           display: flex;
           align-items: center;
@@ -293,11 +324,18 @@
             width: 100%;
             border: none;
             outline: none;
-            color: #2f2d52;
+            color: $dark;
             font-size: 18px;
+            padding: 5px;
+            border-radius: 10px;
+
+            &:focus{
+              outline: 1px solid $light-green;
+            }
+
   
             &::placeholder {
-              color: lightgray;
+              color: $grey;
             }
           }
   
@@ -314,8 +352,8 @@
             button {
               border: none;
               padding: 10px 15px;
-              color: white;
-              background-color: #92cbf9;
+              color: $lite;
+              background: $dark-green;
               cursor: pointer;
             }
           }
