@@ -108,6 +108,7 @@
   .home {
     background: green;
     height: 100vh;
+      oveflow:hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,16 +116,16 @@
     .container {
       border: 1px solid $lite;
       border-radius: 10px;
-      width: 95%;
-      height: 90%;
+      width: 98%;
+      height: 98%;
       display: flex;
       overflow: hidden;
       @include tablet {
-       width: 90%;
+       width: 99%;
       }
   
       .sidebar {
-        flex: 1;
+        flex: 3;
         background: $dark-green;
         position: relative;
   
@@ -232,7 +233,7 @@
         }
       }
       .chat {
-        flex: 5;
+        flex: 1;
         min-width: 200px;
   
         .chatInfo {
