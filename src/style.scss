@@ -115,7 +115,7 @@
     .container {
       border: 1px solid $lite;
       border-radius: 10px;
-      width: 80%;
+      width: 95%;
       height: 90%;
       display: flex;
       overflow: hidden;
@@ -232,7 +232,7 @@
         }
       }
       .chat {
-        flex: 3;
+        flex: 5;
         min-width: 200px;
   
         .chatInfo {
