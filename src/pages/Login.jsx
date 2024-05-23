@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, NavLink } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 
@@ -38,7 +38,7 @@ const Login = () => {
           <button>Sign in</button>
           {err && <span className="error">{err}</span>}
         </form>
-        <p>You don't have an account? <Link to="/register">Register</Link></p>
+        <p>You don't have an account? <NavLink to="/register">Register</NavLink></p>
       </div>
     </div>
   );
